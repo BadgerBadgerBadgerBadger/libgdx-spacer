@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlinVersion = '1.1.1'
+    ext.kotlinVersion = "1.1.1"
 
     repositories {
         mavenLocal()
@@ -8,7 +8,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath "com.android.tools.build:gradle:2.3.0"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
 
     }
@@ -17,14 +17,14 @@ buildscript {
 allprojects {
     apply plugin: "idea"
 
-    version = '1.0'
+    version = "1.0"
     ext {
         appName = "spacer"
-        gdxVersion = '1.9.6'
-        roboVMVersion = '2.3.1'
-        box2DLightsVersion = '1.4'
-        ashleyVersion = '1.7.0'
-        aiVersion = '1.8.0'
+        gdxVersion = "1.9.6"
+        roboVMVersion = "2.3.1"
+        box2DLightsVersion = "1.4"
+        ashleyVersion = "1.7.0"
+        aiVersion = "1.8.0"
     }
 
     repositories {
@@ -72,5 +72,7 @@ project(":core") {
     dependencies {
         compile "com.badlogicgames.gdx:gdx:$gdxVersion"
         compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+        compile "aurelienribon:tweenengine:6.3.3"
+        compile "aurelienribon:tweenengine:6.3.3:sources"
     }
 }
